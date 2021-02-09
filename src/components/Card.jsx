@@ -1,16 +1,18 @@
 import React from "react";
+import Avatar from "./Avatar";
+import Info from "./Info";
 
 function Card(props) {
   return (
     <div className="card">
       <div className="top">
         <h2 className="name">{props.name}</h2>
-        <img src={props.img} alt="avatar_img" className="circle-img" />
+        <Avatar img={props.img} />
       </div>
 
       <div className="bottom">
-        <p className="info">{props.tel}</p>
-        <p className="info">{props.email}</p>
+        <Info detail={props.tel} />
+        <Info detail={props.email} />
       </div>
     </div>
   );
